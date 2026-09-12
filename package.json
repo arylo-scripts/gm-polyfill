@@ -1,25 +1,19 @@
 {
-  "name": "@scripts/gm-polyfill",
+  "name": "@arylo-scripts/gm-polyfill",
   "version": "1.0.0",
-  "private": true,
-  "main": "index.ts",
-  "types": "index.ts",
+  "description": "A small typed polyfill layer for common userscript APIs.",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./index.ts",
-      "require": "./dist/index.js",
       "types": "./dist/index.d.ts",
-      "default": "./index.ts"
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
     }
   },
   "files": [
-    "GM.ts",
-    "GM_addStyle.ts",
-    "GM_getResourceText.ts",
-    "GM_getValue.ts",
-    "GM_setClipboard.ts",
-    "GM_setValue.ts",
-    "GM_xmlhttpRequest.ts"
+    "dist"
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
@@ -28,14 +22,28 @@
     "lint:type-check": "tsc -p tsconfig.json --noEmit",
     "lint:formatter": "oxfmt --check",
     "lint:oxlint": "oxlint",
-    "fix:formatter": "oxfmt"
+    "fix:formatter": "oxfmt",
+    "prepare": "npm run build"
   },
   "devDependencies": {
+    "@arylo-scripts/tsconfig": "github:arylo-scripts/tsconfig#v1.0.0",
     "concurrently": "^8.2.2",
     "oxfmt": "^0.35.0",
     "oxlint": "^1.58.0",
     "rimraf": "^6.1.3",
     "typescript": "~5.9.3"
+  },
+  "engines": {
+    "node": "24.12.0"
+  },
+  "packageManager": "npm@11.6.2",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arylo-scripts/gm-polyfill.git"
+  },
+  "homepage": "https://github.com/arylo-scripts/gm-polyfill#readme",
+  "bugs": {
+    "url": "https://github.com/arylo-scripts/gm-polyfill/issues"
   },
   "license": "MIT"
 }
