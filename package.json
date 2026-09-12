@@ -2,6 +2,13 @@
   "name": "@arylo-scripts/gm-polyfill",
   "version": "1.0.0",
   "description": "A small typed polyfill layer for common userscript APIs.",
+  "keywords": [
+    "userscript",
+    "tampermonkey",
+    "greasemonkey",
+    "gm",
+    "typescript"
+  ],
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
@@ -26,7 +33,7 @@
     "prepare": "npm run build"
   },
   "devDependencies": {
-    "@arylo-scripts/tsconfig": "github:arylo-scripts/tsconfig#master",
+    "@arylo-scripts/tsconfig": "^1.0.0",
     "concurrently": "^8.2.2",
     "oxfmt": "^0.35.0",
     "oxlint": "^1.58.0",
@@ -44,6 +51,11 @@
   "homepage": "https://github.com/arylo-scripts/gm-polyfill#readme",
   "bugs": {
     "url": "https://github.com/arylo-scripts/gm-polyfill/issues"
+  },
+  "author": "Arylo Yeung <arylo.open@gmail.com>",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   },
   "license": "MIT"
 }
